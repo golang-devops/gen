@@ -70,7 +70,7 @@ Implements the signal pattern. [github.com/jackc/signal](https://github.com/jack
 // +gen slice:"Aggregate[T], All, Any, Average, Average[T], Count, Distinct, DisctinctBy, First, GroupBy[T], Max, Max[T], Min, Min[T], MinBy, Select[T], Shuffle, Sort, SortBy, Where"
 type MyType struct{}
 ```
-Generates functional convenience methods that will look familiar to users of C#’s LINQ or JavaScript’s Array methods. It is intended to save you some loops, using a “pass a function” pattern. It offers easier ad-hoc sorts. Documentation is available at [clipperhouse.github.io/gen/slice](https://clipperhouse.github.io/gen/slice/).
+Generates functional convenience methods that will look familiar to users of C#’s LINQ or JavaScript’s Array methods. It is intended to save you some loops, using a “pass a function” pattern. It offers easier ad-hoc sorts. Documentation is available at [clipperhouse.github.io/gen/slice](https://golang-devops.github.io/gen/slice/).
 
 
 `gen add github.com/svett/gen/stack`

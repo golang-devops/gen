@@ -39,6 +39,6 @@ Usage:
   {{.Spacer}}           when detected. 
   {{.Name}} help      Print usage.
 
-Further details are available at http://clipperhouse.github.io/gen
+Further details are available at https://golang-devops.github.io/gen
 
 `))
