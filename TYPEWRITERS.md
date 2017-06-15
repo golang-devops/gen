@@ -99,20 +99,6 @@ const (
 Generates an implementation of the Stringer interface from const variable names, for pretty-printing, based on  [golang.org/x/tools/cmd/stringer](https://golang.org/x/tools/cmd/stringer).
 
 
-
-`gen add github.com/ggaaooppeenngg/queue` 
-
-```go
-// +gen queue
-type MyType struct{}
-```
-Implements a queue.
-
-
-
-Feel free to help these typewriters by making installation easier, improving documentation, writing tests or improving the implementation.
-
-
 `gen add github.com/michaelsmanley/flags`  
 
 ```go
