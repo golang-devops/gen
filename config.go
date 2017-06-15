@@ -3,8 +3,8 @@ package main
 import (
 	"io"
 	"os"
-	"os/user"
 	"path/filepath"
+	"strings"
 
 	"github.com/clipperhouse/typewriter"
 )
@@ -22,11 +22,11 @@ var defaultConfig = config{
 }
 
 func mustGetConfigCustomName() string {
-	curUser, err := user.Current()
-	if err != nil {
-		panic(err)
+	homeDir := strings.TrimSpace(os.Getenv("HOME"))
+	if homeDir == "" {
+		panic("Home dir (env $HOME) is required")
 	}
-	return filepath.Join(curUser.HomeDir, "_user_gen.go")
+	return filepath.Join(homeDir, "_user_gen.go")
 }
 
 // keep in sync with imports.go
