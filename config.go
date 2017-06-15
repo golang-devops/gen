@@ -3,6 +3,8 @@ package main
 import (
 	"io"
 	"os"
+	"os/user"
+	"path/filepath"
 
 	"github.com/clipperhouse/typewriter"
 )
@@ -15,8 +17,16 @@ type config struct {
 
 var defaultConfig = config{
 	out:        os.Stdout,
-	customName: "_gen.go",
+	customName: mustGetConfigCustomName(),
 	Config:     &typewriter.Config{},
+}
+
+func mustGetConfigCustomName() string {
+	curUser, err := user.Current()
+	if err != nil {
+		panic(err)
+	}
+	return filepath.Join(curUser.HomeDir, "_user_gen.go")
 }
 
 // keep in sync with imports.go
